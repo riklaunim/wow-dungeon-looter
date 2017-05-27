@@ -1,0 +1,36 @@
+body {
+  padding: 10px;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.settings, .results {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.settings input {
+  padding: 2px;
+}
+.results table, .results tr, .results td, .results th {
+  background-color: white;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+}
+.results th, .results td {
+  padding: 10px 15px;
+}
+
+.results img {
+  border: 2px solid black;
+}
+.results img.low {
+  opacity: 0.4;
+}
+.results img.best {
+  border-color: blue;
+}
