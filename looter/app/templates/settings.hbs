@@ -1,15 +1,33 @@
 <div class="settings">
-  {{#x-select value=currentSpecialisation name="spec" on-change=(action 'selectSpecialisation') as |xs|}}
-    {{#each specialisations as |specialisation|}}
-       {{#xs.option value=specialisation.label}}{{specialisation.name}}{{/xs.option}}
-    {{/each}}
-  {{/x-select}}
-  {{input placeholder="Primary stat weight" value=weightPrimary}}
-  {{input placeholder="Critical strike weight" value=weightCritical}}
-  {{input placeholder="Haste weight" value=weightHaste}}
-  {{input placeholder="Mastery weight" value=weightMastery}}
-  {{input placeholder="Versatility weight" value=weightVersatility}}
-  {{input type="submit" value="Find best loot" click=(action "showResults")}}
+  <table>
+    <tr>
+      <th rowspan="2">Specialisation</th>
+      <th colspan="5">Stat weights</th>
+      <th rowspan="2"></th>
+    </tr>
+    <tr>
+      <th>Primary</th>
+      <th>Critical strike</th>
+      <th>Haste</th>
+      <th>Mastery</th>
+      <th>Versa</th>
+    </tr>
+    <tr>
+      <td>
+        {{#x-select value=currentSpecialisation name="spec" on-change=(action 'selectSpecialisation') as |xs|}}
+          {{#each specialisations as |specialisation|}}
+             {{#xs.option value=specialisation.label}}{{specialisation.name}}{{/xs.option}}
+          {{/each}}
+        {{/x-select}}
+      </td>
+      <td>{{input placeholder="Primary stat weight" value=weightPrimary}}</td>
+      <td>{{input placeholder="Critical strike weight" value=weightCritical}}</td>
+      <td>{{input placeholder="Haste weight" value=weightHaste}}</td>
+      <td>{{input placeholder="Mastery weight" value=weightMastery}}</td>
+      <td>{{input placeholder="Versatility weight" value=weightVersatility}}</td>
+      <td>{{input type="submit" value="Find best loot" click=(action "showResults")}}</td>
+    </tr>
+  </table>
 </div>
 {{outlet}}
 <div class="results">

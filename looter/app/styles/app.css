@@ -14,14 +14,14 @@ body {
 .settings input {
   padding: 2px;
 }
-.results table, .results tr, .results td, .results th {
+table, tr, td, th {
   background-color: white;
   border-collapse: collapse;
   border: 1px solid #aaa;
   padding: 5px;
   text-align: center;
 }
-.results th, .results td {
+th, td {
   padding: 10px 15px;
 }
 
