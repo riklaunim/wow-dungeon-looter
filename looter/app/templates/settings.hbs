@@ -4,15 +4,17 @@
        {{#xs.option value=specialisation.label}}{{specialisation.name}}{{/xs.option}}
     {{/each}}
   {{/x-select}}
-  {{input placeholder="Primary stat weight"}}
-  {{input placeholder="Critical strike weight"}}
-  {{input placeholder="Haste weight"}}
-  {{input placeholder="Mastery weight"}}
-  {{input placeholder="Versatility weight"}}
-  {{input type="submit" value="Find best loot"}}
+  {{input placeholder="Primary stat weight" value=weightPrimary}}
+  {{input placeholder="Critical strike weight" value=weightCritical}}
+  {{input placeholder="Haste weight" value=weightHaste}}
+  {{input placeholder="Mastery weight" value=weightMastery}}
+  {{input placeholder="Versatility weight" value=weightVersatility}}
+  {{input type="submit" value="Find best loot" click=(action "showResults")}}
 </div>
 {{outlet}}
 <div class="results">
-  <b>Spec</b>: {{currentSpecialisation}}
+  <b>Spec</b>: {{currentSpecialisation}}, <b>Primary weight</b>: {{weightPrimary}},
+  <b>Critical strike weight</b>: {{weightCritical}}, <b>Haste weight</b>: {{weightHaste}},
+  <b>Mastery weight</b>: {{weightMastery}}, <b>Versatility weight</b>: {{weightVersatility}}
 </div>
 <p>{{#link-to "settings.results"}}results test{{/link-to}}</p>
