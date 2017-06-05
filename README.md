@@ -1,6 +1,25 @@
 # wow-dungeon-looter
 Determine which dungeon drops the most valuable items based on your stat values... and more!
 
+MVP ToDo List:
+----------
+
+* Write data harvester using Selenium (Python) - fetch items dropped by dungeon bosses, load detail pages and save stats, ilvl and specs for which they drop
+* Integrate harvested data with Ember app
+* List dungeons with items they drop
+* Implement filter for selected loot spec
+* Implement scoring for loot based on stats weight
+* Unit-test scoring
+* Implement sorting by scorings and slots
+
+2.0 MVP:
+--------
+* Handle different ilvl (Violet hold, raids, crafted)
+* Add raids, crafted items
+* Slot banning
+* Item banning
+* Excessive stats (score less)  
+
 
 Mockup
 ------
